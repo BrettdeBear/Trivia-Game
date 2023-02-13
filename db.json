@@ -2,96 +2,96 @@
   "movies": [
     {
         "id": 1,
-        "question": "question",
-        "answer": "answer",
+        "question": "Film in which Roy Scheider utters the line 'I think we need a bigger boat' ",
+        "answer": "Jaws",
         "value": 100
     },
     {
         "id": 2,
-        "question": "question",
-        "answer": "answer",
+        "question": "In 1994 Jim Carrey was s-s-s-s-smokin' as the green-faced hero of this film",
+        "answer": "The Mask",
         "value": 200
     },
     {
         "id": 3,
-        "question": "question",
-        "answer": "answer",
+        "question": "Bill Murray becomes a better person after living the same day over & over again in this comedy",
+        "answer": "Groundhog Day",
         "value": 300
     },
     {
         "id": 4,
-        "question": "question",
-        "answer": "answer",
+        "question": "In 1991, fresh from their 'Excellent Adventure', this pair went on a 'Bogus Journey'",
+        "answer": "Bill & Ted",
         "value": 400
     },
     {
         "id": 5,
-        "question": "question",
-        "answer": "answer",
+        "question": "1984 film starring Kevin Bacon that was male answer to 'Flashdance'",
+        "answer": "Footloose",
         "value": 500
     }
   ],
   "uscities": [
     {
         "id": 1,
-        "question": "question",
-        "answer": "answer",
+        "question": "There's no evidence that bison ever grazed in vicinity of this second largest NY city",
+        "answer": "Buffalo",
         "value": 100
     },
     {
         "id": 2,
-        "question": "question",
-        "answer": "answer",
+        "question": "The headquarters for Big Brothers is in this city known for that type of love",
+        "answer": "Philadelphia",
         "value": 200
     },
     {
         "id": 3,
-        "question": "question",
-        "answer": "answer",
+        "question": "It's been called '40 suburbs in search of a city', 'Smogville', & 'La-La Land'",
+        "answer": "Los Angeles",
         "value": 300
     },
     {
         "id": 4,
-        "question": "question",
-        "answer": "answer",
+        "question": "This city whose name means 'yellow' is the largest city in the Texas panhandle",
+        "answer": "Amarillo",
         "value": 400
     },
     {
         "id": 5,
-        "question": "question",
-        "answer": "answer",
+        "question": "Only city whose name appears on the state seal of California; it's the state motto",
+        "answer": "Eureka",
         "value": 500
     }
   ],
   "sports": [
     {
         "id": 1,
-        "question": "question",
-        "answer": "answer",
+        "question": "It's where relief pitchers, not matadors, warm up",
+        "answer": "the bullpen",
         "value": 100
     },
     {
         "id": 2,
-        "question": "question",
-        "answer": "answer",
+        "question": "Football's imaginary plane which neither team may cross until the ball is snapped",
+        "answer": "the line of scrimmage",
         "value": 200
     },
     {
         "id": 3,
-        "question": "question",
-        "answer": "answer",
+        "question": "In 2017 this Irish UFC champ tried boxing & got TKO'd by Floyd Mayweather",
+        "answer": "Conor McGregor",
         "value": 300
     },
     {
         "id": 4,
-        "question": "question",
-        "answer": "answer",
+        "question": "In 2021 he swished yet another to break Ray Allen's record for all-time NBA 3-pointers",
+        "answer": "Steph Curry",
         "value": 400
     },
     {
         "id": 5,
-        "question": "question",
-        "answer": "answer",
+        "question": "In 2018 this NHL team was on a roll, making it to the Stanley Cup finals in its very first season",
+        "answer": "Las Vegas Golden Knights",
         "value": 500
     }
   ],
