@@ -98,96 +98,96 @@
   "oddjobs": [
     {
         "id": 1,
-        "question": "question",
-        "answer": "answer",
+        "question": "A spy who lures another into a trap, or just a wooden duck",
+        "answer": "decoy",
         "value": 100
     },
     {
         "id": 2,
-        "question": "question",
-        "answer": "answer",
+        "question": "Gassers of these tropical fruits of the genus Musa spray ethylene gas on them to ripen them so that they're yellow",
+        "answer": "bananas",
         "value": 200
     },
     {
         "id": 3,
-        "question": "question",
-        "answer": "answer",
+        "question": "A cryptographer doesn't break into tombs but breaks these",
+        "answer": "codes",
         "value": 300
     },
     {
         "id": 4,
-        "question": "question",
-        "answer": "answer",
+        "question": "The job of a sommelier in a restaurant is to serve this",
+        "answer": "wine",
         "value": 400
     },
     {
         "id": 5,
-        "question": "question",
-        "answer": "answer",
+        "question": "Position in airport operations which relies on an echo location receiver",
+        "answer": "(air traffic) controller",
         "value": 500
     }
   ],
   "foodfacts": [
     {
         "id": 1,
-        "question": "question",
-        "answer": "answer",
+        "question": "This tuber is the cooked vegetable most commonly used in salads",
+        "answer": "potato",
         "value": 100
     },
     {
         "id": 2,
-        "question": "question",
-        "answer": "answer",
+        "question": "The \"pearl\" type of this is served as a vegetable or pickled & used as a condiment",
+        "answer": "an onion",
         "value": 200
     },
     {
         "id": 3,
-        "question": "question",
-        "answer": "answer",
+        "question": "A famous Italian meat sauce is named for this \"sausage\" city",
+        "answer": "Bologna",
         "value": 300
     },
     {
         "id": 4,
-        "question": "question",
-        "answer": "answer",
+        "question": "These grow on a single tall cabbage on which miniature heads develop at stem joints",
+        "answer": "Brussels sprouts",
         "value": 400
     },
     {
         "id": 5,
-        "question": "question",
-        "answer": "answer",
+        "question": "Clifton Fadiman called this food \"Milk's Leap to Immortality\"",
+        "answer": "Cheese",
         "value": 500
     }
   ],
   "people": [
     {
         "id": 1,
-        "question": "question",
-        "answer": "answer",
+        "question": "By wearing 1 instead of 2, Michael Jackson made it his landmark",
+        "answer": "glove",
         "value": 100
     },
     {
         "id": 2,
-        "question": "question",
-        "answer": "answer",
+        "question": "In the 1950s fashion designer Ralph Lifshitz changed his name to this",
+        "answer": "Ralph Lauren",
         "value": 200
     },
     {
         "id": 3,
-        "question": "question",
-        "answer": "answer",
+        "question": "In the 1960s he founded a bricklaying business, pumping bricks, to finance his bodybuilding career",
+        "answer": "Arnold Schwarzenegger",
         "value": 300
     },
     {
         "id": 4,
-        "question": "question",
-        "answer": "answer",
+        "question": "Dana Owens is the real name of this actress & \"royal\" rap star",
+        "answer": "Queen Latifah",
         "value": 400
     },
     {
         "id": 5,
-        "question": "question",
-        "answer": "answer",
+        "question": "This woman who married a Beatle attended elementary school with Emperor Akihito",
+        "answer": "Yoko Ono",
         "value": 500
     }
   ],
