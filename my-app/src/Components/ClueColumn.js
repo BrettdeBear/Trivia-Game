@@ -1,6 +1,6 @@
 import ClueCard from "./ClueCard";
 
-function ClueColumn({name, clues}) {
+function ClueColumn({name, clues, setDisplay}) {
 
     const filteredClues = clues.filter(clue => {
         if (clue.category === name) {
@@ -8,7 +8,7 @@ function ClueColumn({name, clues}) {
         }
     })
     const clueCards = filteredClues.map(clue => {
-        return <ClueCard key={clue.id} clue={clue}/>
+        return <ClueCard key={clue.id} clue={clue} setDisplay={setDisplay}/>
     })
 
     return (
