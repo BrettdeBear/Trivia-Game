@@ -211,5 +211,14 @@
       "category": "people"
     }
   ],
-  "saved": []
+  "saved": [],
+  "submitted": [
+    {
+      "question": "hi",
+      "answer": "Hello",
+      "points": "100",
+      "category": "Movies",
+      "id": 1
+    }
+  ]
 }

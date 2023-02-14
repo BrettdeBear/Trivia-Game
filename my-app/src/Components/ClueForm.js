@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ClueForm({ clues, setClues }) {
 
+    const [submittedClues, setSubmittedClues] = useState([])
     const [formData, setFormData] = useState({
         question: "",
         answer: "",
@@ -18,7 +19,7 @@ function ClueForm({ clues, setClues }) {
     function handleSubmit(event) {
         event.preventDefault();
 
-        fetch("http://localhost:4000/clues", {
+        fetch("http://localhost:4000/submitted", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -27,8 +28,30 @@ function ClueForm({ clues, setClues }) {
             body: JSON.stringify(formData)
         })
             .then(response => response.json())
-            .then(newClue => setClues(clues => [...clues, newClue]))
+            .then(newClue => console.log(newClue))
     }
+
+    useEffect(() => {
+        fetch("http://localhost:4000/submitted")
+            .then(response => response.json())
+            .then((clueData) => setSubmittedClues(clueData))
+    }, [])
+
+    const renderSubmittedClues = submittedClues.map((clue) => {
+        return <li key={clue.id}>
+            <strong>Question: </strong>
+            {clue.question}
+            <br></br>
+            <strong>Answer: </strong>
+            {clue.answer}
+            <br></br>
+            <strong>Point Value: </strong>
+            {clue.points}
+            <br></br>
+            <strong>Category: </strong>
+            {clue.category}
+        </li>
+    })
 
     return (
         <div>
@@ -74,6 +97,10 @@ function ClueForm({ clues, setClues }) {
                 </label>
                 <button type="submit">Submit Clue</button>
             </form>
+            <h2>Submitted Clues: </h2>
+            <ul>
+                {renderSubmittedClues}
+            </ul>
         </div>
     )
 }
