@@ -1,214 +1,214 @@
 {
   "clues": [
     {
-        "id": 1,
-        "question": "Film in which Roy Scheider utters the line 'I think we need a bigger boat' ",
-        "answer": "Jaws",
-        "value": 100,
-        "category": "movies"
+      "id": 1,
+      "question": "Film in which Roy Scheider utters the line 'I think we need a bigger boat' ",
+      "answer": "Jaws",
+      "value": 100,
+      "category": "movies"
     },
     {
-        "id": 2,
-        "question": "In 1994 Jim Carrey was s-s-s-s-smokin' as the green-faced hero of this film",
-        "answer": "The Mask",
-        "value": 200,
-        "category": "movies"
+      "id": 2,
+      "question": "In 1994 Jim Carrey was s-s-s-s-smokin' as the green-faced hero of this film",
+      "answer": "The Mask",
+      "value": 200,
+      "category": "movies"
     },
     {
-        "id": 3,
-        "question": "Bill Murray becomes a better person after living the same day over & over again in this comedy",
-        "answer": "Groundhog Day",
-        "value": 300,
-        "category": "movies"
+      "id": 3,
+      "question": "Bill Murray becomes a better person after living the same day over & over again in this comedy",
+      "answer": "Groundhog Day",
+      "value": 300,
+      "category": "movies"
     },
     {
-        "id": 4,
-        "question": "In 1991, fresh from their 'Excellent Adventure', this pair went on a 'Bogus Journey'",
-        "answer": "Bill & Ted",
-        "value": 400,
-        "category": "movies"
+      "id": 4,
+      "question": "In 1991, fresh from their 'Excellent Adventure', this pair went on a 'Bogus Journey'",
+      "answer": "Bill & Ted",
+      "value": 400,
+      "category": "movies"
     },
     {
-        "id": 5,
-        "question": "1984 film starring Kevin Bacon that was male answer to 'Flashdance'",
-        "answer": "Footloose",
-        "value": 500,
-        "category": "movies"
+      "id": 5,
+      "question": "1984 film starring Kevin Bacon that was male answer to 'Flashdance'",
+      "answer": "Footloose",
+      "value": 500,
+      "category": "movies"
     },
     {
-        "id": 6,
-        "question": "There's no evidence that bison ever grazed in vicinity of this second largest NY city",
-        "answer": "Buffalo",
-        "value": 100,
-        "category": "us cities"
+      "id": 6,
+      "question": "There's no evidence that bison ever grazed in vicinity of this second largest NY city",
+      "answer": "Buffalo",
+      "value": 100,
+      "category": "us cities"
     },
     {
-        "id": 7,
-        "question": "The headquarters for Big Brothers is in this city known for that type of love",
-        "answer": "Philadelphia",
-        "value": 200,
-        "category": "us cities"
+      "id": 7,
+      "question": "The headquarters for Big Brothers is in this city known for that type of love",
+      "answer": "Philadelphia",
+      "value": 200,
+      "category": "us cities"
     },
     {
-        "id": 8,
-        "question": "It's been called '40 suburbs in search of a city', 'Smogville', & 'La-La Land'",
-        "answer": "Los Angeles",
-        "value": 300,
-        "category": "us cities"
+      "id": 8,
+      "question": "It's been called '40 suburbs in search of a city', 'Smogville', & 'La-La Land'",
+      "answer": "Los Angeles",
+      "value": 300,
+      "category": "us cities"
     },
     {
-        "id": 9,
-        "question": "This city whose name means 'yellow' is the largest city in the Texas panhandle",
-        "answer": "Amarillo",
-        "value": 400,
-        "category": "us cities"
+      "id": 9,
+      "question": "This city whose name means 'yellow' is the largest city in the Texas panhandle",
+      "answer": "Amarillo",
+      "value": 400,
+      "category": "us cities"
     },
     {
-        "id": 10,
-        "question": "Only city whose name appears on the state seal of California; it's the state motto",
-        "answer": "Eureka",
-        "value": 500,
-        "category": "us cities"
+      "id": 10,
+      "question": "Only city whose name appears on the state seal of California; it's the state motto",
+      "answer": "Eureka",
+      "value": 500,
+      "category": "us cities"
     },
     {
-        "id": 11,
-        "question": "It's where relief pitchers, not matadors, warm up",
-        "answer": "the bullpen",
-        "value": 100,
-        "category": "sports"
+      "id": 11,
+      "question": "It's where relief pitchers, not matadors, warm up",
+      "answer": "the bullpen",
+      "value": 100,
+      "category": "sports"
     },
     {
-        "id": 12,
-        "question": "Football's imaginary plane which neither team may cross until the ball is snapped",
-        "answer": "the line of scrimmage",
-        "value": 200,
-        "category": "sports"
+      "id": 12,
+      "question": "Football's imaginary plane which neither team may cross until the ball is snapped",
+      "answer": "the line of scrimmage",
+      "value": 200,
+      "category": "sports"
     },
     {
-        "id": 13,
-        "question": "In 2017 this Irish UFC champ tried boxing & got TKO'd by Floyd Mayweather",
-        "answer": "Conor McGregor",
-        "value": 300,
-        "category": "sports"
+      "id": 13,
+      "question": "In 2017 this Irish UFC champ tried boxing & got TKO'd by Floyd Mayweather",
+      "answer": "Conor McGregor",
+      "value": 300,
+      "category": "sports"
     },
     {
-        "id": 14,
-        "question": "In 2021 he swished yet another to break Ray Allen's record for all-time NBA 3-pointers",
-        "answer": "Steph Curry",
-        "value": 400,
-        "category": "sports"
+      "id": 14,
+      "question": "In 2021 he swished yet another to break Ray Allen's record for all-time NBA 3-pointers",
+      "answer": "Steph Curry",
+      "value": 400,
+      "category": "sports"
     },
     {
-        "id": 15,
-        "question": "In 2018 this NHL team was on a roll, making it to the Stanley Cup finals in its very first season",
-        "answer": "Las Vegas Golden Knights",
-        "value": 500,
-        "category": "sports"
+      "id": 15,
+      "question": "In 2018 this NHL team was on a roll, making it to the Stanley Cup finals in its very first season",
+      "answer": "Las Vegas Golden Knights",
+      "value": 500,
+      "category": "sports"
     },
     {
-        "id": 16,
-        "question": "A spy who lures another into a trap, or just a wooden duck",
-        "answer": "decoy",
-        "value": 100,
-        "category": "odd jobs"
+      "id": 16,
+      "question": "A spy who lures another into a trap, or just a wooden duck",
+      "answer": "decoy",
+      "value": 100,
+      "category": "odd jobs"
     },
     {
-        "id": 17,
-        "question": "Gassers of these tropical fruits of the genus Musa spray ethylene gas on them to ripen them so that they're yellow",
-        "answer": "bananas",
-        "value": 200,
-        "category": "odd jobs"
+      "id": 17,
+      "question": "Gassers of these tropical fruits of the genus Musa spray ethylene gas on them to ripen them so that they're yellow",
+      "answer": "bananas",
+      "value": 200,
+      "category": "odd jobs"
     },
     {
-        "id": 18,
-        "question": "A cryptographer doesn't break into tombs but breaks these",
-        "answer": "codes",
-        "value": 300,
-        "category": "odd jobs"
+      "id": 18,
+      "question": "A cryptographer doesn't break into tombs but breaks these",
+      "answer": "codes",
+      "value": 300,
+      "category": "odd jobs"
     },
     {
-        "id": 19,
-        "question": "The job of a sommelier in a restaurant is to serve this",
-        "answer": "wine",
-        "value": 400,
-        "category": "odd jobs"
+      "id": 19,
+      "question": "The job of a sommelier in a restaurant is to serve this",
+      "answer": "wine",
+      "value": 400,
+      "category": "odd jobs"
     },
     {
-        "id": 20,
-        "question": "Position in airport operations which relies on an echo location receiver",
-        "answer": "(air traffic) controller",
-        "value": 500,
-        "category": "odd jobs"
+      "id": 20,
+      "question": "Position in airport operations which relies on an echo location receiver",
+      "answer": "(air traffic) controller",
+      "value": 500,
+      "category": "odd jobs"
     },
     {
-        "id": 21,
-        "question": "This tuber is the cooked vegetable most commonly used in salads",
-        "answer": "potato",
-        "value": 100,
-        "category": "food facts"
+      "id": 21,
+      "question": "This tuber is the cooked vegetable most commonly used in salads",
+      "answer": "potato",
+      "value": 100,
+      "category": "food facts"
     },
     {
-        "id": 22,
-        "question": "The \"pearl\" type of this is served as a vegetable or pickled & used as a condiment",
-        "answer": "an onion",
-        "value": 200,
-        "category": "food facts"
+      "id": 22,
+      "question": "The \"pearl\" type of this is served as a vegetable or pickled & used as a condiment",
+      "answer": "an onion",
+      "value": 200,
+      "category": "food facts"
     },
     {
-        "id": 23,
-        "question": "A famous Italian meat sauce is named for this \"sausage\" city",
-        "answer": "Bologna",
-        "value": 300,
-        "category": "food facts"
+      "id": 23,
+      "question": "A famous Italian meat sauce is named for this \"sausage\" city",
+      "answer": "Bologna",
+      "value": 300,
+      "category": "food facts"
     },
     {
-        "id": 24,
-        "question": "These grow on a single tall cabbage on which miniature heads develop at stem joints",
-        "answer": "Brussels sprouts",
-        "value": 400,
-        "category": "food facts"
+      "id": 24,
+      "question": "These grow on a single tall cabbage on which miniature heads develop at stem joints",
+      "answer": "Brussels sprouts",
+      "value": 400,
+      "category": "food facts"
     },
     {
-        "id": 25,
-        "question": "Clifton Fadiman called this food \"Milk's Leap to Immortality\"",
-        "answer": "Cheese",
-        "value": 500,
-        "category": "food facts"
+      "id": 25,
+      "question": "Clifton Fadiman called this food \"Milk's Leap to Immortality\"",
+      "answer": "Cheese",
+      "value": 500,
+      "category": "food facts"
     },
     {
-        "id": 26,
-        "question": "By wearing 1 instead of 2, Michael Jackson made it his landmark",
-        "answer": "glove",
-        "value": 100,
-        "category": "people"
+      "id": 26,
+      "question": "By wearing 1 instead of 2, Michael Jackson made it his landmark",
+      "answer": "glove",
+      "value": 100,
+      "category": "people"
     },
     {
-        "id": 27,
-        "question": "In the 1950s fashion designer Ralph Lifshitz changed his name to this",
-        "answer": "Ralph Lauren",
-        "value": 200,
-        "category": "people"
+      "id": 27,
+      "question": "In the 1950s fashion designer Ralph Lifshitz changed his name to this",
+      "answer": "Ralph Lauren",
+      "value": 200,
+      "category": "people"
     },
     {
-        "id": 28,
-        "question": "In the 1960s he founded a bricklaying business, pumping bricks, to finance his bodybuilding career",
-        "answer": "Arnold Schwarzenegger",
-        "value": 300,
-        "category": "people"
+      "id": 28,
+      "question": "In the 1960s he founded a bricklaying business, pumping bricks, to finance his bodybuilding career",
+      "answer": "Arnold Schwarzenegger",
+      "value": 300,
+      "category": "people"
     },
     {
-        "id": 29,
-        "question": "Dana Owens is the real name of this actress & \"royal\" rap star",
-        "answer": "Queen Latifah",
-        "value": 400,
-        "category": "people"
+      "id": 29,
+      "question": "Dana Owens is the real name of this actress & \"royal\" rap star",
+      "answer": "Queen Latifah",
+      "value": 400,
+      "category": "people"
     },
     {
-        "id": 30,
-        "question": "This woman who married a Beatle attended elementary school with Emperor Akihito",
-        "answer": "Yoko Ono",
-        "value": 500,
-        "category": "people"
+      "id": 30,
+      "question": "This woman who married a Beatle attended elementary school with Emperor Akihito",
+      "answer": "Yoko Ono",
+      "value": 500,
+      "category": "people"
     }
   ],
   "saved": []

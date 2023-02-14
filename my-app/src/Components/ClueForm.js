@@ -1,31 +1,46 @@
 import { useState } from "react";
 
-function ClueForm() {
+function ClueForm({ clues, setClues }) {
 
     const [formData, setFormData] = useState({
-        clue: "",
+        question: "",
         answer: "",
         points: "100",
+        category: "Movies",
     })
 
-    const handleInput = (event) => {
+    function handleInput(event) {
         const key = event.target.name
         const value = event.target.value
-
         setFormData({...formData, [key]: value})
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        fetch("http://localhost:4000/clues", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accepts": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(newClue => setClues(clues => [...clues, newClue]))
     }
 
     return (
         <div>
-            <form>
-                <label htmlFor="question">Clue: </label>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="question">Question: </label>
                 <input 
                     type="text" 
-                    id="clue"
-                    name="clue"
-                    placeholder="Clue..." 
+                    id="question"
+                    name="question"
+                    placeholder="Question..." 
                     onChange={handleInput}
-                    value={formData.clue}
+                    value={formData.question}
                 />
                 <label htmlFor="question">Answer: </label>
                 <input 
@@ -44,6 +59,17 @@ function ClueForm() {
                         <option value="300">300 Points</option>
                         <option value="400">400 Points</option>
                         <option value="500">500 Points</option>
+                    </select>
+                </label>
+                <label>
+                    Category: 
+                    <select name="category" id="category" onChange={handleInput} value={formData.category}>
+                    <option value="movies">Movies</option>
+                    <option value="uscities">US Cities</option>
+                    <option value="sports">Sports</option>
+                    <option value="oddjobs">Odd Jobs</option>
+                    <option value="foodfacts">Food Facts</option>
+                    <option value="people">People</option>
                     </select>
                 </label>
                 <button type="submit">Submit Clue</button>
