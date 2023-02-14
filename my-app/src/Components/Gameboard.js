@@ -2,7 +2,7 @@ import { useState } from "react";
 import ClueColumn from "./ClueColumn";
 import ClueDisplay from "./ClueDisplay";
 
-function Gameboard({clues}) {
+function Gameboard({clues, points, setPoints}) {
 
     const [display, setDisplay] = useState({})
 
@@ -14,7 +14,7 @@ function Gameboard({clues}) {
 
     return(
       <div>
-         <ClueDisplay clue={display}/>
+         <ClueDisplay clue={display} setPoints={setPoints} points={points}/>
          <div className="gameboard">
             {clueColumns}
          </div>

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import NavBar from "./NavBar";
+import Header from "./Header";
 import ClueForm from "./ClueForm";
 import Gameboard from "./Gameboard";
 import SavedClues from "./SavedClues";
 
 function App() {
   const [clues, setClues] = useState([])
+  const [points, setPoints] = useState(0)
 
   useEffect(() => {
     fetch("http://localhost:4000/clues")
@@ -16,9 +17,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Gameboard clues={clues}/>
-      </header>
+        <Header points={points}/>
+        <Gameboard clues={clues} points={points} setPoints={setPoints}/>
     </div>
   );
 }
