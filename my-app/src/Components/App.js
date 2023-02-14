@@ -25,7 +25,7 @@ function App() {
           <Gameboard clues={clues} />
         </Route>
         <Route path="/submit">
-          <ClueForm />
+          <ClueForm clues={clues} setClues={setClues}/>
         </Route>
         <Route>
           <SavedClues path="/saved" />
