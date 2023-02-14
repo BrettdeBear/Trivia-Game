@@ -13,6 +13,10 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         ) : (
             null
         )
+    const savedClueIds = savedClues.map(clue => {
+        return clue.id})
+    console.log(savedClueIds);
+
 
     function handleClick(){
         setShowAnswer(showAnswer => !showAnswer)
