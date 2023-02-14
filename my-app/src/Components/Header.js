@@ -1,11 +1,10 @@
 import NavBar from "./NavBar";
 import PointsDisplay from "./PointsDisplay";
 
-function Header({points}) {
+function Header() {
    return (
     <div>
         <NavBar />
-        <PointsDisplay points={points}/>
     </div>
    )
 }

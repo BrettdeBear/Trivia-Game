@@ -7,7 +7,7 @@ import {Switch, Route} from "react-router-dom";
 
 function App() {
   const [clues, setClues] = useState([])
-  const [points, setPoints] = useState(0)
+  
 
   useEffect(() => {
     fetch("http://localhost:4000/clues")
@@ -19,10 +19,10 @@ function App() {
   return (
     <div className="App">
       
-      <Header points={points}/>
+      <Header />
       <Switch>
         <Route exact path="/">
-          <Gameboard clues={clues} points={points} setPoints={setPoints}/>
+          <Gameboard clues={clues} />
         </Route>
         <Route path="/submit">
           <ClueForm />

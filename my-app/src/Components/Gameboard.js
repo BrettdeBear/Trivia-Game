@@ -1,11 +1,13 @@
 import { useState } from "react";
 import ClueColumn from "./ClueColumn";
 import ClueDisplay from "./ClueDisplay";
+import PointsDisplay from "./PointsDisplay";
 
-function Gameboard({clues, points, setPoints}) {
+function Gameboard({clues}) {
 
     const [display, setDisplay] = useState({})
     const [showAnswer, setShowAnswer] = useState(false)
+    const [points, setPoints] = useState(0)
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
@@ -15,6 +17,7 @@ function Gameboard({clues, points, setPoints}) {
 
     return(
       <div>
+        <PointsDisplay points={points} />
          <ClueDisplay clue={display} setPoints={setPoints} points={points} showAnswer={showAnswer} setShowAnswer={setShowAnswer}/>
          <div className="gameboard">
             {clueColumns}
