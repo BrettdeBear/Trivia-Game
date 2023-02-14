@@ -1,5 +1,5 @@
 function ClueCard() {
-    return <div></div>
+    return <div>Weee Clue Card!</div>
 }
 
 export default ClueCard;
