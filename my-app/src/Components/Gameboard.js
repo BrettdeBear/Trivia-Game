@@ -4,7 +4,7 @@ import ClueDisplay from "./ClueDisplay";
 
 function Gameboard({clues}) {
 
-    const [display, setDisplay] = useState()
+    const [display, setDisplay] = useState({})
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
@@ -13,10 +13,19 @@ function Gameboard({clues}) {
 
 
     return(
-     <div className="gameboard">
-         {clueColumns}
-     </div>
+      <div>
+         <ClueDisplay clue={display}/>
+         <div className="gameboard">
+            {clueColumns}
+         </div>
+      </div>
+     
+     
      )
+
+
+
+
 }
 
 export default Gameboard;
