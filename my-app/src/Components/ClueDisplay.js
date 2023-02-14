@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 
-function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer}) {
+function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedClues}) {
     
 
     const buttonText = showAnswer ? "Hide Answer" : "Show Answer"

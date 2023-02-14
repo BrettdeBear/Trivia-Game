@@ -3,7 +3,7 @@ import ClueColumn from "./ClueColumn";
 import ClueDisplay from "./ClueDisplay";
 import PointsDisplay from "./PointsDisplay";
 
-function Gameboard({clues}) {
+function Gameboard({clues, savedClues}) {
 
     const [display, setDisplay] = useState({})
     const [showAnswer, setShowAnswer] = useState(false)
@@ -18,7 +18,7 @@ function Gameboard({clues}) {
     return(
       <div>
         <PointsDisplay points={points} />
-         <ClueDisplay clue={display} setPoints={setPoints} points={points} showAnswer={showAnswer} setShowAnswer={setShowAnswer}/>
+         <ClueDisplay clue={display} setPoints={setPoints} points={points} showAnswer={showAnswer} setShowAnswer={setShowAnswer} savedClues={savedClues}/>
          <div className="gameboard">
             {clueColumns}
          </div>
