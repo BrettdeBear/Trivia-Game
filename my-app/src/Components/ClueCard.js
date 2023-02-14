@@ -1,9 +1,10 @@
-function ClueCard({clue, setDisplay}) {
+function ClueCard({clue, setDisplay, setShowAnswer}) {
     console.log(clue.value)
     
 
     function handleClick() {
-        setDisplay(clue)
+        setShowAnswer(false);
+        setDisplay(clue);
     }
 
     return(
