@@ -4,10 +4,10 @@ import Fuse from 'fuse.js'
 // Now we're going to add answer inputs! 
 // Hello Brett!
 
-function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues}) {
+function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, responseText, setResponseText}) {
 
     const [isSaved, setIsSaved] = useState(false)
-    const [responseText, setResponseText] = useState("")
+    
 
     const savedClueIds = savedClues.map(clue => {
         return clue.id})

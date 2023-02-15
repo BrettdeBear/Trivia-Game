@@ -8,17 +8,18 @@ function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
 
     const [display, setDisplay] = useState({})
     const [points, setPoints] = useState(0)
+    const [responseText, setResponseText] = useState("")
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
-      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} onClickDelete={onClickDelete} />
+      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} onClickDelete={onClickDelete} setResponseText={setResponseText}/>
    })
 
 
     return(
       <div>
         <PointsDisplay points={points} />
-         <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues}/>
+         <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText}/>
          <div className="gameboard">
             {clueColumns}
          </div>
