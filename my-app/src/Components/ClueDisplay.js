@@ -1,5 +1,7 @@
 import {useState, useEffect} from "react";
 
+// Now we're going to add answer inputs!
+
 function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedClues, setSavedClues}) {
 
     const [isSaved, setIsSaved] = useState(false)
