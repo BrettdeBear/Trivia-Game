@@ -17,6 +17,13 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         return clue.id})
     console.log(savedClueIds);
 
+    const isSaved = savedClueIds.includes(clue.id)
+
+    const showSaveUnsave = isSaved ? (
+        <button>Unsave Clue</button>
+    ) : (
+        <button onClick={handleSave}>Save Clue</button>
+    )
 
     function handleClick(){
         setShowAnswer(showAnswer => !showAnswer)
@@ -49,7 +56,7 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
             {showAnswer ? <p>{clue.answer}</p> : null}
             <button onClick={handleClick}>{buttonText}</button>
             {showPointsButton}
-            <button onClick={handleSave}>Save Clue</button>
+            {showSaveUnsave}
         </div>
     )
 }
