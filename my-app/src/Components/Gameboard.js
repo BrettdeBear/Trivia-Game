@@ -7,19 +7,18 @@ import PointsDisplay from "./PointsDisplay";
 function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
 
     const [display, setDisplay] = useState({})
-    const [showAnswer, setShowAnswer] = useState(false)
     const [points, setPoints] = useState(0)
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
-      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} setShowAnswer={setShowAnswer} onClickDelete={onClickDelete} />
+      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} onClickDelete={onClickDelete} />
    })
 
 
     return(
       <div>
         <PointsDisplay points={points} />
-         <ClueDisplay clue={display} setPoints={setPoints} points={points} showAnswer={showAnswer} setShowAnswer={setShowAnswer} savedClues={savedClues} setSavedClues={setSavedClues}/>
+         <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues}/>
          <div className="gameboard">
             {clueColumns}
          </div>

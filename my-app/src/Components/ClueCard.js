@@ -1,8 +1,7 @@
 
-function ClueCard({clue, setDisplay, setShowAnswer, onClickDelete}) {
+function ClueCard({clue, setDisplay, onClickDelete}) {
 
     function handleClick() {
-        setShowAnswer(false);
         setDisplay(clue);
         onClickDelete(clue.id)
     }

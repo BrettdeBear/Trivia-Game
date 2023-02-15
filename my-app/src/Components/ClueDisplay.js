@@ -4,9 +4,11 @@ import Fuse from 'fuse.js'
 // Now we're going to add answer inputs! 
 // Hello Brett!
 
-function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedClues, setSavedClues}) {
+function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues}) {
 
     const [isSaved, setIsSaved] = useState(false)
+    const [responseText, setResponseText] = useState("")
+
     const savedClueIds = savedClues.map(clue => {
         return clue.id})
     const [answer, setAnswer] = useState("")
@@ -26,11 +28,9 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         checkIfSaved();
     })
 
-    
-    const buttonText = showAnswer ? "Hide Answer" : "Show Answer"
-
     //////////// Original Point Tracking Logic /////////////////
     
+    // const buttonText = showAnswer ? "Hide Answer" : "Show Answer"
     // const showPointsButton = showAnswer ? (
     //     <div>
     //         <p>Did you get the correct answer?</p>
@@ -46,10 +46,6 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
     ) : (
         <button onClick={handleSave}>Save Clue</button>
     )
-
-    function handleClick(){
-        setShowAnswer(showAnswer => !showAnswer)
-    }
 
     function handleAddPoints(clueValue) {
         setPoints(points => points + clueValue)
@@ -79,6 +75,8 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
             })
             .then(setSavedClues(updatedSavedClues))
         }
+    
+    //let responseText;
 
     function handleSubmitAnswer(event) {
         event.preventDefault();
@@ -87,10 +85,16 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         const searchArray = [actualAnswer]
         const fuse = new Fuse(searchArray);
         const checkedAnswer = fuse.search(userAnswer);
-        (checkedAnswer.length > 0) 
-            ? handleAddPoints(clue.value)
-            : handleSubtractPoints(clue.value)
+        if (checkedAnswer.length > 0) {
+            handleAddPoints(clue.value)
+            setResponseText(`Correct! The answer is ${clue.answer}.`)
+
+        } else {
+            handleSubtractPoints(clue.value)
+            setResponseText(`Incorrect! The answer is ${clue.answer}.`)
+        }
         setAnswer("")
+        console.log(responseText)
     }
 
     function handleChange(event) {
@@ -107,8 +111,7 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
                 </label>
                 <input type="submit" value="Submit Answer"/>
             </form>
-            {showAnswer ? <p>{clue.answer}</p> : null}
-            <button onClick={handleClick}>{buttonText}</button>
+            <p>{responseText}</p>
             {/* {showPointsButton} */}
             {showSaveUnsave}
         </div>
