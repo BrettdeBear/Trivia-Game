@@ -1,5 +1,5 @@
+
 function ClueCard({clue, setDisplay, setShowAnswer, onClickDelete}) {
-    console.log(clue.value)    
 
     function handleClick() {
         setShowAnswer(false);
