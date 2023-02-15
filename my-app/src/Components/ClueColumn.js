@@ -1,6 +1,8 @@
+
 import ClueCard from "./ClueCard";
 
-function ClueColumn({name, clues, setDisplay, setShowAnswer}) {
+function ClueColumn({name, clues, setDisplay, setShowAnswer, onClickDelete}) {
+    
 
     const filteredClues = clues.filter(clue => {
         if (clue.category === name) {
@@ -8,7 +10,7 @@ function ClueColumn({name, clues, setDisplay, setShowAnswer}) {
         }
     })
     const clueCards = filteredClues.map(clue => {
-        return <ClueCard key={clue.id} clue={clue} setDisplay={setDisplay} setShowAnswer={setShowAnswer}/>
+        return <ClueCard key={clue.id} clue={clue} setDisplay={setDisplay} setShowAnswer={setShowAnswer} onClickDelete={onClickDelete} />
     })
 
     return (
