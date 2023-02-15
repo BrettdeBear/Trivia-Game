@@ -1,8 +1,12 @@
 function SavedClues({savedClues}) {
 
     const savedClueItems = savedClues.map(clue => {
-        return <li key={clue.id}><strong>Question:</strong> {clue.question} | <strong>Answer:</strong> <em>{clue.answer}</em></li>
-    })
+        return (
+        <li key={clue.id}><strong>Question:</strong> {clue.question} | <strong>Answer:</strong> <em>{clue.answer}</em>
+        <br/>
+        <button>Delete</button>
+        </li>
+    )})
 
     return(
         <div>
