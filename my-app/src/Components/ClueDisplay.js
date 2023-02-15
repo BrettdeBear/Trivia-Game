@@ -33,10 +33,8 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         )
     
 
-    //const isSaved = savedClueIds.includes(clue.id)
-
     const showSaveUnsave = isSaved ? (
-        <button>Unsave Clue</button>
+        <button onClick={handleDelete}>Unsave Clue</button>
     ) : (
         <button onClick={handleSave}>Save Clue</button>
     )
@@ -64,7 +62,15 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
             .then(response => response.json())
             .then(savedClue => setSavedClues([...savedClues, savedClue]))
         }
-
+    
+        function handleDelete() {
+            const deletedClueId = clue.id
+            const updatedSavedClues = savedClues.filter(clue => clue.id !== deletedClueId)
+            fetch(`http://localhost:4000/saved/${clue.id}`, {
+                method: "DELETE"
+            })
+            .then(setSavedClues(updatedSavedClues))
+        }
 
     return (
         <div>
