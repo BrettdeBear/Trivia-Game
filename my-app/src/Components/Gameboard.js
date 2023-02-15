@@ -3,7 +3,8 @@ import ClueColumn from "./ClueColumn";
 import ClueDisplay from "./ClueDisplay";
 import PointsDisplay from "./PointsDisplay";
 
-function Gameboard({clues, savedClues, setSavedClues}) {
+
+function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
 
     const [display, setDisplay] = useState({})
     const [showAnswer, setShowAnswer] = useState(false)
@@ -11,7 +12,7 @@ function Gameboard({clues, savedClues, setSavedClues}) {
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
-      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} setShowAnswer={setShowAnswer}/>
+      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} setShowAnswer={setShowAnswer} onClickDelete={onClickDelete} />
    })
 
 
@@ -24,11 +25,7 @@ function Gameboard({clues, savedClues, setSavedClues}) {
          </div>
       </div>
      
-     
      )
-
-
-
 
 }
 

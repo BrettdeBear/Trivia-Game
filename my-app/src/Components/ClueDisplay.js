@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react";
 
-
 function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedClues, setSavedClues}) {
 
     const [isSaved, setIsSaved] = useState(false)
@@ -21,10 +20,12 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         }
         checkIfSaved();
     })
+
     
     const buttonText = showAnswer ? "Hide Answer" : "Show Answer"
     const showPointsButton = showAnswer ? (
         <div>
+            <p>Did you get the correct answer?</p>
             <button onClick={handleAddPoints}>Yes</button>
             <button onClick={handleSubtractPoints}>No</button>
         </div>
@@ -32,7 +33,6 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
             null
         )
     
-
     const showSaveUnsave = isSaved ? (
         <button onClick={handleDelete}>Unsave Clue</button>
     ) : (
