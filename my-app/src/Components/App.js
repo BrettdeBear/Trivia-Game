@@ -33,7 +33,7 @@ function App() {
           <ClueForm />
         </Route>
         <Route>
-          <SavedClues path="/saved" savedClues={savedClues}/>
+          <SavedClues path="/saved" savedClues={savedClues} setSavedClues={setSavedClues}/>
         </Route>
       </Switch>
     </div>
