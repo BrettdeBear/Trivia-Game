@@ -83,9 +83,8 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
     function handleSubmitAnswer(event) {
         event.preventDefault();
         const userAnswer = answer.toLowerCase()
-        const actualAnswer = clue.answer
-        const lowerAnswer = actualAnswer.toLowerCase()
-        const searchArray = [lowerAnswer]
+        const actualAnswer = clue.answer.toLowerCase()
+        const searchArray = [actualAnswer]
         const fuse = new Fuse(searchArray);
         const checkedAnswer = fuse.search(userAnswer);
         (checkedAnswer.length > 0) 
