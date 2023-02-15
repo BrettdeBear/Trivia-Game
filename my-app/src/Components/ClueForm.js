@@ -28,7 +28,7 @@ function ClueForm({ clues, setClues }) {
             body: JSON.stringify(formData)
         })
             .then(response => response.json())
-            .then(newClue => console.log(newClue))
+            .then(newClue => setSubmittedClues([...submittedClues, newClue]))
     }
 
     useEffect(() => {
