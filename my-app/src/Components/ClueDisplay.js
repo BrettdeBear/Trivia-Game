@@ -3,10 +3,11 @@ import {useState} from "react";
 
 function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer}) {
     
-    // const [displayQ, setDisplayQ] = useState(true)
+    
     const buttonText = showAnswer ? "Hide Answer" : "Show Answer"
     const showPointsButton = showAnswer ? (
         <div>
+            <p>Did you get the correct answer?</p>
             <button onClick={handleAddPoints}>Yes</button>
             <button onClick={handleSubtractPoints}>No</button>
         </div>
@@ -25,13 +26,6 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer}) {
     function handleSubtractPoints() {
         setPoints(points => points - clue.value)
     }
-    
-    // function handleRemove(id) {
-    //     const newDisplay = displayQ.filter((clueObj) => {
-    //         return clueObj.id !== id
-    //     })
-    //     setDisplayQ(newDisplay)
-    // }
 
     return (
         <div>

@@ -15,7 +15,7 @@ function ClueColumn({name, clues, setDisplay, setShowAnswer, onClickDelete}) {
 
     return (
     <div className="category">
-        <h2>{name}</h2>
+        <h2>{name.toUpperCase()}</h2>
         {clueCards}  
     </div>
     )
