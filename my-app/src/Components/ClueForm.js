@@ -37,6 +37,16 @@ function ClueForm({ clues, setClues }) {
             .then((clueData) => setSubmittedClues(clueData))
     }, [])
 
+    function deleteSubmittedClue(id) {
+        const newSubmitted = submittedClues.filter(clue => {
+            return clue.id !== id
+        })
+        fetch(`http://localhost:4000/submitted/${id}`, {
+            method: "DELETE"
+        })
+        .then(setSubmittedClues(newSubmitted))
+    }
+
     const renderSubmittedClues = submittedClues.map((clue) => {
         return <li key={clue.id}>
             <strong>Question: </strong>
@@ -50,6 +60,8 @@ function ClueForm({ clues, setClues }) {
             <br></br>
             <strong>Category: </strong>
             {clue.category}
+            <br></br>
+            <button onClick={() => deleteSubmittedClue(clue.id)}>Delete Clue</button>
         </li>
     })
 
