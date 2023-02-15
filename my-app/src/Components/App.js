@@ -27,7 +27,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Gameboard clues={clues} savedClues={savedClues}/>
+          <Gameboard clues={clues} savedClues={savedClues} setSavedClues={setSavedClues}/>
         </Route>
         <Route path="/submit">
           <ClueForm />

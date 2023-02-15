@@ -1,9 +1,27 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 
-function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedClues}) {
+function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedClues, setSavedClues}) {
+
+    const [isSaved, setIsSaved] = useState(false)
+    const savedClueIds = savedClues.map(clue => {
+        return clue.id})
+
+    useEffect(() => {
+
+
+        function checkIfSaved(){
+            if (savedClueIds.includes(clue.id)) {
+                setIsSaved(true)
+                console.log("This is a saved question!")
+            } else {
+                setIsSaved(false)
+                console.log("This question is unsaved.")
+            } 
+        }
+        checkIfSaved();
+    })
     
-
     const buttonText = showAnswer ? "Hide Answer" : "Show Answer"
     const showPointsButton = showAnswer ? (
         <div>
@@ -13,11 +31,9 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
         ) : (
             null
         )
-    const savedClueIds = savedClues.map(clue => {
-        return clue.id})
-    console.log(savedClueIds);
+    
 
-    const isSaved = savedClueIds.includes(clue.id)
+    //const isSaved = savedClueIds.includes(clue.id)
 
     const showSaveUnsave = isSaved ? (
         <button>Unsave Clue</button>
@@ -46,7 +62,7 @@ function ClueDisplay({clue, points, setPoints, showAnswer, setShowAnswer, savedC
             body: JSON.stringify(clue) 
             })
             .then(response => response.json())
-            .then(savedClue => console.log(savedClue))
+            .then(savedClue => setSavedClues([...savedClues, savedClue]))
         }
 
 
