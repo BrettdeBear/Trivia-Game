@@ -13,6 +13,10 @@ button, input {
   font-family: 'Chakra Petch', sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 h3 {
   color: #FFCE30;
 }
@@ -53,6 +57,8 @@ code {
 }
 
 .nav {
+  
+  text-align: center;
  
 }
 
@@ -64,4 +70,29 @@ code {
   width: 400px;
   border-radius: 10px;
   float: left;
+}
+
+li {
+  display: inline;
+  padding: 40px;
+  width: 100%;
+  
+}
+
+.navLink {
+  color: #060ce9;
+  
+}
+
+.pointsDisplay {
+  float: right;
+  margin-right: 250px;
+}
+
+.clueDisplay {
+  margin-left: 250px;
+}
+
+.gameH2 {
+  text-align: center;
 }

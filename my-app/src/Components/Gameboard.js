@@ -21,7 +21,7 @@ function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
       <div id="main-game">
         <PointsDisplay points={points} />
          <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText}/>
-         <h2>Game Board</h2>
+         <h2 className="gameH2">Game Board</h2>
          <img src={Felix} alt="Host Felix Quebec instructs you to click on a card to view its clue." />
          <div className="gameboard">
             {clueColumns}
