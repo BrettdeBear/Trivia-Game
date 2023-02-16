@@ -8,7 +8,7 @@ function ClueCard({clue, setDisplay, onClickDelete, setResponseText}) {
     }
 
     return(
-        <div onClick={handleClick}>
+        <div className="clueCard" onClick={handleClick}>
             <h3>${clue.value}</h3>
         </div>
     ) 
