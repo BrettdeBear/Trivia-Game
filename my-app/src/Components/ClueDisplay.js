@@ -102,7 +102,7 @@ function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, respon
     }
 
     return (
-        <div>
+        <div className="clueDisplay">
             <h2>Current Clue</h2>
             <p>{clue.question}</p>
             <form onSubmit={handleSubmitAnswer}>
