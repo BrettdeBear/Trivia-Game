@@ -2,6 +2,7 @@ import { useState } from "react";
 import ClueColumn from "./ClueColumn";
 import ClueDisplay from "./ClueDisplay";
 import PointsDisplay from "./PointsDisplay";
+import Felix from "../assets/podium.jpg"
 
 
 function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
@@ -17,10 +18,11 @@ function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
 
 
     return(
-      <div>
+      <div id="main-game">
         <PointsDisplay points={points} />
          <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText}/>
          <h2 className="gameH2">Game Board</h2>
+         <img src={Felix} alt="Host Felix Quebec instructs you to click on a card to view its clue." />
          <div className="gameboard">
             {clueColumns}
          </div>

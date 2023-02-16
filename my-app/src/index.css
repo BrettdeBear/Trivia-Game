@@ -62,6 +62,16 @@ code {
  
 }
 
+#header img {
+  width: 200px;
+}
+
+#main-game img {
+  width: 400px;
+  border-radius: 10px;
+  float: left;
+}
+
 li {
   display: inline;
   padding: 40px;
@@ -86,4 +96,3 @@ li {
 .gameH2 {
   text-align: center;
 }
-
