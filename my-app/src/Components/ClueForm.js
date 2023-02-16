@@ -109,7 +109,7 @@ function ClueForm({ clues, setClues }) {
                 </label>
                 <button type="submit">Submit Clue</button>
             </form>
-            <h2>Submitted Clues: </h2>
+            <h2>Submitted Clues </h2>
             <ul>
                 {renderSubmittedClues}
             </ul>

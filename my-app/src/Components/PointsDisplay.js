@@ -4,7 +4,8 @@ function PointsDisplay({points}) {
 
     return (
         <div>
-            <p>Points: {points}</p>
+            <h2>Score</h2>
+            <p>Points: ${points}</p>
         </div>
     )
 }

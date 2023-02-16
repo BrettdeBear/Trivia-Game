@@ -20,6 +20,7 @@ function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
       <div>
         <PointsDisplay points={points} />
          <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText}/>
+         <h2>Game Board</h2>
          <div className="gameboard">
             {clueColumns}
          </div>
