@@ -76,13 +76,14 @@ li {
 
 .pointsDisplay {
   float: right;
-  margin-right: 100px;
+  margin-right: 250px;
 }
 
 .clueDisplay {
-  margin-left: 100px;
+  margin-left: 250px;
 }
 
 .gameH2 {
   text-align: center;
 }
+
