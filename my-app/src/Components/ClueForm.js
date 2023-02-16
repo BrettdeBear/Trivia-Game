@@ -67,7 +67,7 @@ function ClueForm({ clues, setClues }) {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="clueForm" onSubmit={handleSubmit}>
                 <label htmlFor="question">Question: </label>
                 <input 
                     type="text" 
@@ -77,6 +77,7 @@ function ClueForm({ clues, setClues }) {
                     onChange={handleInput}
                     value={formData.question}
                 />
+                <br></br>
                 <label htmlFor="question">Answer: </label>
                 <input 
                     type="text" 
@@ -86,6 +87,7 @@ function ClueForm({ clues, setClues }) {
                     onChange={handleInput}
                     value={formData.answer}
                 />
+                <br></br>
                 <label>
                     Point Value:
                     <select name="points" id="points" onChange={handleInput} value={formData.points}>
@@ -96,6 +98,7 @@ function ClueForm({ clues, setClues }) {
                         <option value="500">500 Points</option>
                     </select>
                 </label>
+                <br></br>
                 <label>
                     Category: 
                     <select name="category" id="category" onChange={handleInput} value={formData.category}>
@@ -107,6 +110,7 @@ function ClueForm({ clues, setClues }) {
                     <option value="people">People</option>
                     </select>
                 </label>
+                <br></br>
                 <button type="submit">Submit Clue</button>
             </form>
             <h2>Submitted Clues </h2>

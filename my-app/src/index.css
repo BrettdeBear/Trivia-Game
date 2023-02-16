@@ -1,8 +1,9 @@
 body {
-  margin: 0;
+  margin: auto;
   font-family: 'Chakra Petch', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 90%;
 }
 
 h1, h2, h3 {
@@ -11,6 +12,48 @@ h1, h2, h3 {
 
 button, input {
   font-family: 'Chakra Petch', sans-serif;
+}
+
+button {
+  border: 2px solid;
+  border-color: #115ff4;
+  border-radius:2em;
+  padding:0.3em 1.2em;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  color: #115ff4;
+  background-color: white;
+}
+
+button:hover {
+  background-color: #cccccc;
+}
+
+input[type=submit] {
+  border: 2px solid;
+  border-color: #115ff4;
+  border-radius:2em;
+  padding:0.3em 1.2em;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  color: #115ff4;
+  background-color: white;
+}
+
+input[type=submit]:hover {
+  background-color: #cccccc;
+}
+select {
+  border: 2px solid;
+  border-color: #115ff4;
+  border-radius:2em;
+  padding:0.3em 1.2em;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+input[type=text] {
+  border: 2px solid;
+  border-color: #115ff4;
+  border-radius:2em;
+  padding:0.3em 1.2em;
 }
 
 h1 {
@@ -29,13 +72,15 @@ code {
 
 .gameboard {
   margin: auto;
-  width: 70%;
+  width: 950px;
   display: flex;
   flex-direction: row;
   align-items: center;
   border: 1px solid black;
-  background-color: #cccccc;
+  background-color: #FFCE30;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  border-radius: 20px;
+
 }
 
 .category {
@@ -44,6 +89,7 @@ code {
   flex-direction: column;
   gap: 5px;
   align-items: center;
+  flex-shrink: 3;
 }
 
 .clueCard {
@@ -54,45 +100,80 @@ code {
   padding-bottom: 30px;
   background-color: #115ff4;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  font-size: larger;
 }
 
 .nav {
   
   text-align: center;
+  margin: auto;
+  width: 900px;
+  align-items: center;
+  justify-content: center;
  
 }
 
-#header img {
-  width: 200px;
+.navLink.active {
+  background-color: #cccc;
 }
 
-#main-game img {
-  width: 400px;
-  border-radius: 10px;
-  float: left;
+.game-info img {
+  width: 250px;
+  border-radius: 20px;
 }
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 950px;
+  margin: auto;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #FFCE30;
+}
+
 
 li {
+  padding-bottom: 10px;
+  width: 100%;
+  list-style-type: none;
   display: inline;
   padding: 40px;
-  width: 100%;
-  
 }
 
 .navLink {
   color: #060ce9;
+  border: 2px solid;
+  border-color: #115ff4;
+  border-radius:2em;
+  padding:0.3em 1.2em;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  color: #115ff4;
+  background-color: white;
   
 }
 
-.pointsDisplay {
-  float: right;
-  margin-right: 250px;
+.navLink:hover {
+  background-color: #cccccc;
 }
 
-.clueDisplay {
-  margin-left: 250px;
+body {
+  background-image: linear-gradient(white, #cccccc, #115ff4, #cccccc, white);
 }
+
+
+/* .pointsDisplay {
+  float: right;
+  margin-right: 250px;
+  
+} */
 
 .gameH2 {
   text-align: center;
 }
+
+/* body {
+  back
+} */
