@@ -59,3 +59,9 @@ code {
 #header img {
   width: 200px;
 }
+
+#main-game img {
+  width: 400px;
+  border-radius: 10px;
+  float: left;
+}
