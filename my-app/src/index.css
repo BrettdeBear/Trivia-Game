@@ -13,7 +13,9 @@ button, input {
   font-family: 'Chakra Petch', sans-serif;
 }
 
-
+h3 {
+  color: #FFCE30;
+}
 
 
 code {
@@ -28,6 +30,8 @@ code {
   flex-direction: row;
   align-items: center;
   border: 1px solid black;
+  background-color: #cccccc;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 }
 
 .category {
@@ -44,4 +48,10 @@ code {
   padding-right: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: #115ff4;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.nav {
+ 
 }

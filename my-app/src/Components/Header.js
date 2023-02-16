@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import PointsDisplay from "./PointsDisplay";
 
+
 function Header() {
    return (
     <div>

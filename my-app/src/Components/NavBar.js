@@ -4,7 +4,7 @@ function NavBar() {
     return (
         <>
             <h2>Menu</h2>
-            <ul>
+            <ul className="nav">
                 <NavLink exact to="/">
                     <li>Game</li>
                 </NavLink>
