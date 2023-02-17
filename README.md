@@ -17,6 +17,7 @@ $ json-server --watch db.json --port 4000
 
 ## Usage
 - When clicking on a clue card, the clue will appear in the clue display above the game board, and the card itself will discolor to show that it has been deactivated. This will make it clear that this clue was already chosen and cannot be utilized again.
+![](01_AnswerQuestionCorrectly.gif)
 
 - When a user types in an answer and clicks "Submit Answer", the points score should update based on whether they answered correctly. If they answered correctly, they should see the the following text in green: "Correct! The answer is (clue answer)." If they answered incorrectly, the text should be in red.
 
