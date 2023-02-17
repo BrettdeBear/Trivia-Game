@@ -18,26 +18,25 @@ $ json-server --watch db.json --port 4000
 ## Usage
 When clicking on a clue card, the clue will appear in the clue display above the game board, and the card itself will discolor to show that it has been deactivated. This will make it clear that this clue was already chosen and cannot be utilized again.
 
-![](01_AnswerQuestionCorrectly.gif)
+![Screen recording showing a user selecting a clue and submitting the correct answer.](01_AnswerQuestionCorrectly.gif)
 
 When a user types in an answer and clicks "Submit Answer", the points score should update based on whether they answered correctly. If they answered correctly, they should see the the following text in green: "Correct! The answer is (clue answer)." 
 
 If they answered incorrectly, the text should be in red.
 
-![](02_AnswerQuestionIncorrectly.gif)
+![Screen recording showing a user selecting a clue and submitting an incorrect answer.](02_AnswerQuestionIncorrectly.gif)
 
 If the user's answer is close but misspelled, they will still get points.
 
-![](03_MisspellAnswer.gif)
+![Screen recording showing a user selecting a clue and submitting a misspelled answer.](03_MisspellAnswer.gif)
 
 When navigating into the "Submit Clue" tab, users will see a section for submitting a new question, answer, point value, and category. After submitting, their clue will appear in the "Submitted Clues" list. Users will also be able to delete their submitted clues.
 
-![](05_SubmitClueAndDelete.gif)
+![Screen recording showing a user submitting a new clue and then deleting it.](05_SubmitClueAndDelete.gif)
 
 In the clue display, there is a button that allows users to save clues they would like to refer back to. When saving a clue, it is saved to the "Saved Clues" tab. If they click "unsave", it will be deleted. Users will also be able to delete these clues from their "Saved Clues" list in that tab.
 
-![](04_SaveQuestionAndDelete.gif)
-
+![Screen recording showing a user saving a clue and then deleting it.](04_SaveQuestionAndDelete.gif)
 
 ## Roadmap
 Future editions include:
