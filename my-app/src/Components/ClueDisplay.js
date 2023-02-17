@@ -107,12 +107,17 @@ function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, respon
             <p>{clue.question}</p>
             <form onSubmit={handleSubmitAnswer}>
                 <label>
-                    Your Answer:
+                    <strong>Your Answer: </strong>
                     <input type="text" name="userAnswer" value={answer} onChange={handleChange}/>
                 </label>
                 <input type="submit" value="Submit Answer"/>
             </form>
-            <p>{responseText}</p>
+            <p className={
+                responseText === `Incorrect! The answer is ${clue.answer}.`
+                     ? "falseText" 
+                     : "trueText"}>
+                    <strong>{responseText}</strong>
+            </p>
             {/* {showPointsButton} */}
             {showSaveUnsave}
         </div>

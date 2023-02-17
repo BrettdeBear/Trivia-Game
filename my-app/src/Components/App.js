@@ -21,20 +21,13 @@ function App() {
     .then(clueData => setSavedClues(clueData))
 }, [])
 
-  function handleDelete(id) {
-    const newClueDisplay = clues.filter(clue => {
-      return clue.id !== id;
-    });
-    setClues(newClueDisplay)
-  }
-
   return (
     <div className="App">
       
       <Header />
       <Switch>
         <Route exact path="/">
-          <Gameboard clues={clues} savedClues={savedClues} setSavedClues={setSavedClues} onClickDelete={handleDelete}/>
+          <Gameboard clues={clues} savedClues={savedClues} setSavedClues={setSavedClues}/>
         </Route>
         <Route path="/submit">
           <ClueForm clues={clues} setClues={setClues}/>

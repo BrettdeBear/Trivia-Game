@@ -6,7 +6,7 @@ import Felix from "../assets/felixPodium.jpg"
 
 
 
-function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
+function Gameboard({clues, savedClues, setSavedClues}) {
 
     const [display, setDisplay] = useState({})
     const [points, setPoints] = useState(0)
@@ -14,14 +14,14 @@ function Gameboard({clues, savedClues, setSavedClues, onClickDelete}) {
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
-      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} onClickDelete={onClickDelete} setResponseText={setResponseText}/>
+      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} setResponseText={setResponseText}/>
    })
 
 
     return(
       <div id="main-game">
          <div className="game-info">
-            <img src={Felix} alt="Felix" />
+            <img src={Felix} alt="Host Felix Quebec instructs you to click on a card to view its clue." />
             <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText}/>
             <PointsDisplay points={points} />
          </div>

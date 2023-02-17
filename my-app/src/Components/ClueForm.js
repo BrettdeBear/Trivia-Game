@@ -29,6 +29,12 @@ function ClueForm({ clues, setClues }) {
         })
             .then(response => response.json())
             .then(newClue => setSubmittedClues([...submittedClues, newClue]))
+            setFormData({
+                question: "",
+                answer: "",
+                points: "100",
+                category: "Movies",
+            })
     }
 
     useEffect(() => {
@@ -48,26 +54,33 @@ function ClueForm({ clues, setClues }) {
     }
 
     const renderSubmittedClues = submittedClues.map((clue) => {
-        return <li key={clue.id}>
+        return <ul className="submittedClue" key={clue.id}>
+           <li>
             <strong>Question: </strong>
             {clue.question}
-            <br></br>
+            </li>
+            <li>
             <strong>Answer: </strong>
             {clue.answer}
-            <br></br>
+            </li>
+            <li>
             <strong>Point Value: </strong>
             {clue.points}
-            <br></br>
+            </li>
+            <li>
             <strong>Category: </strong>
-            {clue.category}
+            {clue.category.toUpperCase()}
+            </li>
             <br></br>
             <button onClick={() => deleteSubmittedClue(clue.id)}>Delete Clue</button>
-        </li>
+        </ul>
     })
 
     return (
         <div>
             <form className="clueForm" onSubmit={handleSubmit}>
+                <h2>Submit a New Clue</h2>
+                <br></br>
                 <label htmlFor="question">Question: </label>
                 <input 
                     type="text" 
@@ -78,6 +91,7 @@ function ClueForm({ clues, setClues }) {
                     value={formData.question}
                 />
                 <br></br>
+                <br></br>
                 <label htmlFor="question">Answer: </label>
                 <input 
                     type="text" 
@@ -87,6 +101,7 @@ function ClueForm({ clues, setClues }) {
                     onChange={handleInput}
                     value={formData.answer}
                 />
+                <br></br>
                 <br></br>
                 <label>
                     Point Value:
@@ -99,8 +114,9 @@ function ClueForm({ clues, setClues }) {
                     </select>
                 </label>
                 <br></br>
+                <br></br>
                 <label>
-                    Category: 
+                    Category:  
                     <select name="category" id="category" onChange={handleInput} value={formData.category}>
                     <option value="movies">Movies</option>
                     <option value="uscities">US Cities</option>
@@ -108,12 +124,13 @@ function ClueForm({ clues, setClues }) {
                     <option value="oddjobs">Odd Jobs</option>
                     <option value="foodfacts">Food Facts</option>
                     <option value="people">People</option>
-                    </select>
+                    </select> 
                 </label>
+                <br></br>
                 <br></br>
                 <button type="submit">Submit Clue</button>
             </form>
-            <h2>Submitted Clues </h2>
+            <h2 className="clueH2">Submitted Clues </h2>
             <ul>
                 {renderSubmittedClues}
             </ul>

@@ -2,10 +2,14 @@ function SavedClues({savedClues, setSavedClues}) {
 
     const savedClueItems = savedClues.map(clue => {
         return (
-        <li key={clue.id}><strong>Question:</strong> {clue.question} | <strong>Answer:</strong> <em>{clue.answer}</em>
-        <br/>
-        <button onClick={() => handleDelete(clue.id)}>Delete</button>
-        </li>
+        <ul className="savedClue" key={clue.id}>
+            <li><strong>Question: </strong> {clue.question}</li>
+            <li><strong>Answer: </strong> <em>{clue.answer}</em></li>
+            <li><strong>Value: </strong>${clue.value}</li>
+            <li><strong>Category: </strong>{clue.category.toUpperCase()}</li>
+            <br/>     
+            <button onClick={() => handleDelete(clue.id)}>Delete</button>
+        </ul>
     )})
 
     function handleDelete(deletedClueId) {
@@ -18,8 +22,8 @@ function SavedClues({savedClues, setSavedClues}) {
 
     return(
         <div>
-            <h2>Saved Clues</h2>
-            <ul>
+            <h2 className="clueH2">Saved Clues</h2>
+            <ul id="savedClueContainer">
                 {savedClueItems}
             </ul>
         </div>

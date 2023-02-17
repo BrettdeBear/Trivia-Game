@@ -1,7 +1,7 @@
 
 import ClueCard from "./ClueCard";
 
-function ClueColumn({name, clues, setDisplay, onClickDelete, setResponseText}) {
+function ClueColumn({name, clues, setDisplay, setResponseText}) {
     
 
     const filteredClues = clues.filter(clue => {
@@ -10,7 +10,7 @@ function ClueColumn({name, clues, setDisplay, onClickDelete, setResponseText}) {
         }
     })
     const clueCards = filteredClues.map(clue => {
-        return <ClueCard key={clue.id} clue={clue} setDisplay={setDisplay} onClickDelete={onClickDelete} setResponseText={setResponseText}/>
+        return <ClueCard key={clue.id} clue={clue} setDisplay={setDisplay} setResponseText={setResponseText}/>
     })
 
     return (
