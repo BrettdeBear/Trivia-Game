@@ -211,36 +211,6 @@
       "category": "people"
     }
   ],
-  "saved": [
-    {
-      "id": 6,
-      "question": "There's no evidence that bison ever grazed in vicinity of this second largest NY city",
-      "answer": "Buffalo",
-      "value": 100,
-      "category": "us cities"
-    },
-    {
-      "id": 15,
-      "question": "In 2018 this NHL team was on a roll, making it to the Stanley Cup finals in its very first season",
-      "answer": "Las Vegas Golden Knights",
-      "value": 500,
-      "category": "sports"
-    }
-  ],
-  "submitted": [
-    {
-      "question": "Who has the coolest project?",
-      "answer": "Brett and Bianca",
-      "points": "500",
-      "category": "people",
-      "id": 2
-    },
-    {
-      "question": "How fast does the adult male ostrich run on average?",
-      "answer": "35 mph",
-      "points": "300",
-      "category": "Movies",
-      "id": 3
-    }
-  ]
+  "saved": [],
+  "submitted": []
 }
