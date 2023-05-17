@@ -3,15 +3,13 @@ import Fuse from 'fuse.js'
 
 function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, setResponseText}) {
 
-    const [isSaved, setIsSaved] = useState(false)
-    
+    const [isSaved, setIsSaved] = useState(false)    
 
     const savedClueIds = savedClues.map(clue => {
         return clue.id})
     const [answer, setAnswer] = useState("")
     
     useEffect(() => {
-
 
         function checkIfSaved(){
             if (savedClueIds.includes(clue.id)) {
@@ -26,7 +24,7 @@ function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, 
     const showSaveUnsave = isSaved ? (
         <button onClick={handleDelete}>Unsave Clue</button>
     ) : (
-        <button onClick={handleSave}>Save Clue</button>
+        <button onClick={handleSave} disabled={clue.id === undefined ? true : false}>Save Clue</button>
     )
 
     function handleAddPoints(clueValue) {
