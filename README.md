@@ -6,11 +6,10 @@ Users will be able to view a homepage that includes a game board filled with clu
 
 ## Installation
 After forking and cloning the project, prior to launching the application, there are a few steps to follow to get the project up and running in your browser:
-1. Make sure you are in the my-app directory
-2. Run `npm install` in the terminal to install packages and resolve dependencies.
-3. Run `npm start`. This will launch the development server in your browser. The default port it will run from is http://localhost:3000/.
-4. Install JSON Server. Instructions for how to install JSON Server on your machine can be found in the [JSON Server Documentation](https://www.npmjs.com/package/json-server).
-5. Once JSON Server is installed, run the following code from the terminal while in the project directory:
+1. Run `npm install` in the terminal to install packages and resolve dependencies.
+2. Run `npm start`. This will launch the development server in your browser. The default port it will run from is http://localhost:3000/.
+3. Install JSON Server. Instructions for how to install JSON Server on your machine can be found in the [JSON Server Documentation](https://www.npmjs.com/package/json-server).
+4. Once JSON Server is installed, run the following code from the terminal while in the project directory:
 ```
 $ json-server --watch db.json --port 4000
 ```
