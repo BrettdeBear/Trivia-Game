@@ -1,7 +1,5 @@
 function PointsDisplay({points}) {
 
-    
-
     return (
         <div className="pointsDisplay">
             <h2>Score</h2>
