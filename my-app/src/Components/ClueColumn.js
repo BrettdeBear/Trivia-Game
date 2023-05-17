@@ -7,6 +7,8 @@ function ClueColumn({name, clues, setDisplay, setResponseText}) {
     const filteredClues = clues.filter(clue => {
         if (clue.category === name) {
             return clue
+        } else {
+            return null
         }
     })
     const clueCards = filteredClues.map(clue => {
