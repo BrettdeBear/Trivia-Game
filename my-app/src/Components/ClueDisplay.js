@@ -36,7 +36,7 @@ function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, 
     }
 
     function handleSave() {
-        fetch("http://localhost:4000/saved", {
+        fetch(`${process.env.REACT_APP_API_URL}/saved`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -50,7 +50,7 @@ function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, 
         function handleDelete() {
             const deletedClueId = clue.id
             const updatedSavedClues = savedClues.filter(clue => clue.id !== deletedClueId)
-            fetch(`http://localhost:4000/saved/${clue.id}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/saved/${clue.id}`, {
                 method: "DELETE"
             })
             .then(setSavedClues(updatedSavedClues))

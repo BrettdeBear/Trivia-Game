@@ -19,7 +19,7 @@ function ClueForm() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        fetch("http://localhost:4000/submitted", {
+        fetch(`${process.env.REACT_APP_API_URL}/submitted`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function ClueForm() {
     }
 
     useEffect(() => {
-        fetch("http://localhost:4000/submitted")
+        fetch(`${process.env.REACT_APP_API_URL}/submitted`)
             .then(response => response.json())
             .then((clueData) => setSubmittedClues(clueData))
     }, [])
@@ -47,7 +47,7 @@ function ClueForm() {
         const newSubmitted = submittedClues.filter(clue => {
             return clue.id !== id
         })
-        fetch(`http://localhost:4000/submitted/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/submitted/${id}`, {
             method: "DELETE"
         })
         .then(setSubmittedClues(newSubmitted))
