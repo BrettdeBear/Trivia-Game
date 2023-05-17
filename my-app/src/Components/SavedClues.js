@@ -11,10 +11,10 @@ function SavedClues({savedClues, setSavedClues}) {
             <button onClick={() => handleDelete(clue.id)}>Delete</button>
         </ul>
     )})
-
+    
     function handleDelete(deletedClueId) {
         const updatedSavedClues = savedClues.filter(clue => clue.id !== deletedClueId)
-        fetch(`http://localhost:4000/saved/${deletedClueId}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/saved/${deletedClueId}`, {
             method: "DELETE"
         })
         .then(setSavedClues(updatedSavedClues))

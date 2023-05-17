@@ -10,13 +10,13 @@ function App() {
   const [savedClues, setSavedClues] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:4000/clues")
+    fetch(`${process.env.REACT_APP_API_URL}/clues`)
       .then((response) => response.json())
       .then((clueData) => setClues(clueData))
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:4000/saved")
+    fetch(`${process.env.REACT_APP_API_URL}/saved`)
     .then(response => response.json())
     .then(clueData => setSavedClues(clueData))
 }, [])
