@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function ClueForm({ clues, setClues }) {
+function ClueForm() {
 
     const [submittedClues, setSubmittedClues] = useState([])
     const [formData, setFormData] = useState({
@@ -54,26 +54,31 @@ function ClueForm({ clues, setClues }) {
     }
 
     const renderSubmittedClues = submittedClues.map((clue) => {
-        return <ul className="submittedClue" key={clue.id}>
-           <li>
-            <strong>Question: </strong>
-            {clue.question}
-            </li>
-            <li>
-            <strong>Answer: </strong>
-            {clue.answer}
-            </li>
-            <li>
-            <strong>Point Value: </strong>
-            {clue.points}
-            </li>
-            <li>
-            <strong>Category: </strong>
-            {clue.category.toUpperCase()}
-            </li>
-            <br></br>
+        return (
+            <div className="submittedClue" key={clue.id}>
+                <ul>
+                    <li>
+                        <strong>Question: </strong>
+                        {clue.question}
+                    </li>
+                    <li>
+                        <strong>Answer: </strong>
+                        {clue.answer}
+                    </li>
+                    <li>
+                        <strong>Point Value: </strong>
+                        {clue.points}
+                    </li>
+                    <li>
+                        <strong>Category: </strong>
+                        {clue.category.toUpperCase()}
+                    </li>
+                </ul>
+            <br/>
             <button onClick={() => deleteSubmittedClue(clue.id)}>Delete Clue</button>
-        </ul>
+        </div>
+
+        )
     })
 
     return (

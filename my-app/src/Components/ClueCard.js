@@ -8,7 +8,6 @@ function ClueCard({clue, setDisplay, setResponseText}) {
     function handleClick() {
         setResponseText("");
         setDisplay(clue);
-        /* onClickDelete(clue.id) */
         setDisabled(true);
     }
 

@@ -1,12 +1,7 @@
 import NavBar from "./NavBar";
-import PointsDisplay from "./PointsDisplay";
 
 
 function Header() {
-    const fontStyle = {
-        fontSize: 10,
-    }
-
 
    return (
     <div id="header" className="header">
