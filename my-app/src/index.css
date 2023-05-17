@@ -132,7 +132,6 @@ code {
 .submittedClue {
   text-align: left;
   padding-left: 0;
-  list-style-type: none;
   border: 2px solid black;
   border-radius: 20px;
   background-color: #FFCE30;
@@ -141,6 +140,14 @@ code {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.submittedClue ul {
+  list-style-type: none;
+}
+
+.submittedClue button {
+  margin-left: 35px;
 }
 
 .nav {
