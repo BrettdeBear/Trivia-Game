@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function ClueForm({ clues, setClues }) {
+function ClueForm() {
 
     const [submittedClues, setSubmittedClues] = useState([])
     const [formData, setFormData] = useState({

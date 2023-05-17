@@ -1,10 +1,7 @@
 import {useState, useEffect} from "react";
 import Fuse from 'fuse.js'
 
-// Now we're going to add answer inputs! 
-// Hello Brett!
-
-function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, responseText, setResponseText}) {
+function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, setResponseText}) {
 
     const [isSaved, setIsSaved] = useState(false)
     
@@ -19,27 +16,12 @@ function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, respon
         function checkIfSaved(){
             if (savedClueIds.includes(clue.id)) {
                 setIsSaved(true)
-                console.log("This is a saved question!")
             } else {
                 setIsSaved(false)
-                console.log("This question is unsaved.")
             } 
         }
         checkIfSaved();
     })
-
-    //////////// Original Point Tracking Logic /////////////////
-    
-    // const buttonText = showAnswer ? "Hide Answer" : "Show Answer"
-    // const showPointsButton = showAnswer ? (
-    //     <div>
-    //         <p>Did you get the correct answer?</p>
-    //         <button onClick={handleAddPoints}>Yes</button>
-    //         <button onClick={handleSubtractPoints}>No</button>
-    //     </div>
-    //     ) : (
-    //         null
-    //     )
     
     const showSaveUnsave = isSaved ? (
         <button onClick={handleDelete}>Unsave Clue</button>
@@ -76,8 +58,6 @@ function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, respon
             .then(setSavedClues(updatedSavedClues))
         }
     
-    //let responseText;
-
     function handleSubmitAnswer(event) {
         event.preventDefault();
         const userAnswer = answer.toLowerCase()
@@ -94,7 +74,6 @@ function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, respon
             setResponseText(`Incorrect! The answer is ${clue.answer}.`)
         }
         setAnswer("")
-        console.log(responseText)
     }
 
     function handleChange(event) {
@@ -118,7 +97,6 @@ function ClueDisplay({clue, points, setPoints, savedClues, setSavedClues, respon
                      : "trueText"}>
                     <strong>{responseText}</strong>
             </p>
-            {/* {showPointsButton} */}
             {showSaveUnsave}
         </div>
     )
