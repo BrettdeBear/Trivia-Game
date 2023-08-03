@@ -266,3 +266,7 @@ button:disabled {
   background-color: #cccccc;
   color: #666666;
 }
+
+.load {
+  margin: auto;
+}
