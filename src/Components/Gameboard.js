@@ -27,7 +27,11 @@ function Gameboard({clues, savedClues, setSavedClues}) {
          </div>
          <h2 className="gameH2">Game Board</h2>
          <div className="gameboard">
-            {clueColumns}
+            {
+               (clues[0])
+               ? clueColumns
+               : <p className='load'>Loading...</p>
+            }
          </div>
       </div>
      
