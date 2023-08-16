@@ -1,7 +1,7 @@
 
 import {useState} from "react";
 
-function ClueCard({clue, setDisplay, setResponseText}) {
+function ClueCard({clue, setDisplay, setResponseText, setCanSubmit}) {
 
     const [disabled, setDisabled] = useState(false);
 
@@ -9,6 +9,7 @@ function ClueCard({clue, setDisplay, setResponseText}) {
         setResponseText("");
         setDisplay(clue);
         setDisabled(true);
+        setCanSubmit(true);
     }
 
     return(

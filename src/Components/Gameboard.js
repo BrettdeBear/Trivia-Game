@@ -9,12 +9,13 @@ import Felix from "../assets/felixPodium.jpg"
 function Gameboard({clues, savedClues, setSavedClues}) {
 
     const [display, setDisplay] = useState({})
+    const [canSubmit, setCanSubmit] = useState(false)
     const [points, setPoints] = useState(0)
     const [responseText, setResponseText] = useState("")
 
    const distinctCategories = [...new Set(clues.map(clue => clue.category))];
    const clueColumns = distinctCategories.map(category => {
-      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} setResponseText={setResponseText}/>
+      return <ClueColumn key={category} name={category} clues={clues} setDisplay={setDisplay} setResponseText={setResponseText} setCanSubmit={setCanSubmit}/>
    })
 
 
@@ -22,7 +23,7 @@ function Gameboard({clues, savedClues, setSavedClues}) {
       <div id="main-game">
          <div className="game-info">
             <img src={Felix} alt="Host Felix Quebec instructs you to click on a card to view its clue." />
-            <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText}/>
+            <ClueDisplay clue={display} setPoints={setPoints} points={points} savedClues={savedClues} setSavedClues={setSavedClues} responseText={responseText} setResponseText={setResponseText} canSubmit={canSubmit} setCanSubmit={setCanSubmit}/>
             <PointsDisplay points={points} />
          </div>
          <h2 className="gameH2">Game Board</h2>
