@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import Fuse from 'fuse.js'
 
-function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, setResponseText}) {
+function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, setResponseText, canSubmit, setCanSubmit}) {
 
     const [isSaved, setIsSaved] = useState(false)    
 
@@ -72,6 +72,7 @@ function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, 
             setResponseText(`Incorrect! The answer is ${clue.answer}.`)
         }
         setAnswer("")
+        setCanSubmit(false)
     }
 
     function handleChange(event) {
@@ -87,7 +88,7 @@ function ClueDisplay({clue, setPoints, savedClues, setSavedClues, responseText, 
                     <strong>Your Answer: </strong>
                     <input type="text" name="userAnswer" value={answer} onChange={handleChange}/>
                 </label>
-                <input type="submit" value="Submit Answer"/>
+                <input type="submit" value="Submit Answer" disabled={!canSubmit}/>
             </form>
             <p className={
                 responseText === `Incorrect! The answer is ${clue.answer}.`
